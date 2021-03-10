@@ -63,14 +63,14 @@ $("form[name=signup_form").submit(function(e) {
 });
 
 
-
+// XMLHTTpRequest
 $("form[name=update_form").submit(function(e) {
 
   var $form = $(this);
   var $error = $form.find(".error");
   var data = $form.serialize();
 
-  var url = "https://myfridge-backend.herokuapp.com/api/user/5cacd790c0624beda9aed930a9e3605a";
+  var url = "https://myfridge-backend.herokuapp.com/api/user/dcb1c5d19499440095ac147d41742efe";
 
   var xhr = new XMLHttpRequest();
   xhr.open("PUT", url);
@@ -90,3 +90,30 @@ $("form[name=update_form").submit(function(e) {
   e.preventDefault();
 });
 
+/* AJAX
+$("form[name=update_form").submit(function(e) {
+
+  var $form = $(this);
+  var $error = $form.find(".error");
+  var data = $form.serialize();
+
+  $.ajax({
+    url: "https://myfridge-backend.herokuapp.com/api/user/dcb1c5d19499440095ac147d41742efe",
+    type: "PUT",
+    headers: {"Authorization": 'Bearer ' + localStorage.getItem('token')},
+    data: data,
+    dataType: "json",
+    success: function(resp) {
+      //window.location.href = "index.html";
+      console.log(resp);
+    },
+    error: function(resp) {
+      $error.text(resp.responseJSON.error).removeClass("error--hidden");
+    }
+  });
+
+  e.preventDefault();
+});
+
+
+*/
