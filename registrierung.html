@@ -67,12 +67,6 @@
               <!-- NF Änderung-->
               <form name="signup_form">
 
-                <label for="vorname">Vorname</label>
-                <input type="text" name="vorname" class="field" required>
-
-                <label for="nachname">Nachname</label>
-                <input type="text" name="nachname" class="field" required>
-        
                 <label for="email">Email</label>
                 <input type="email" name="email" class="field" required>
         
@@ -86,6 +80,27 @@
               </form>
 
               <!-- ENDE NF Änderung-->
+
+
+              <form name="update_form">
+ 
+                <label for="vorname">Vorname</label>
+                <input type="text" name="vorname" class="field" required>
+
+                <label for="nachname">Nachname</label>
+                <input type="text" name="nachname" class="field" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" class="field" required>
+        
+                <label for="passwort">Password</label>
+                <input type="passwort" name="passwort" class="field" required>
+        
+                <p class="error error--hidden"></p>
+        
+                <input type="submit" value="Update User" class="btn">
+              
+              </form>
 		
 
 			
