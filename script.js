@@ -45,7 +45,7 @@ $("form[name=signup_form").submit(function(e) {
   var data = $form.serialize();
 
   $.ajax({
-    url: "http://localhost:8080/https://myfridge-backend.herokuapp.com/api/registration",
+    url: "https://myfridge-backend.herokuapp.com/api/registration",
     type: "POST",
     data: data,
     dataType: "json",
